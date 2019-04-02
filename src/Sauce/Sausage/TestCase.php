@@ -69,7 +69,7 @@ trait TestCase
         if ($local) {
             $this->setHost($host ? $host : 'localhost');
         } else {
-            $sauce_host = SAUCE_USERNAME.':'.SAUCE_ACCESS_KEY.'@ondemand.saucelabs.com';
+            $sauce_host = SAUCE_USERNAME.':'.SAUCE_ACCESS_KEY.'@ondemand.eu-central-1.saucelabs.com';
             $this->setHost($host ? $host : $sauce_host);
         }
 
@@ -206,7 +206,7 @@ trait TestCase
         $key = SAUCE_USERNAME.':'.SAUCE_ACCESS_KEY;
         $auth_token = hash_hmac("md5", $job_id, $key);
 
-        return "https://saucelabs.com/jobs/".$job_id."?auth=".$auth_token;
+        return "https://eu-central-1.saucelabs.com/jobs/".$job_id."?auth=".$auth_token;
     }
 
     public function toString()

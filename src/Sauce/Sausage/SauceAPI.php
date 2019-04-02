@@ -1,7 +1,7 @@
 <?php
 namespace Sauce\Sausage;
 
-define('SAUCE_HOST', 'saucelabs.com');
+define('SAUCE_HOST', 'eu-central-1.saucelabs.com');
 
 class SauceAPI
 {
@@ -53,7 +53,7 @@ class SauceAPI
         if (getenv('CURL_CA_BUNDLE')) {
             curl_setopt($ch, CURLOPT_CAINFO, getenv('CURL_CA_BUNDLE'));
         }
-        
+
         // If user has requested it, be extremely verbose when making requests.
         // This is primarily intended to help Sauce Support staff figure out what's
         // busted.

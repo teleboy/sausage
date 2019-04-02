@@ -42,7 +42,7 @@ abstract class SeleniumRCTestCase extends \PHPUnit_Extensions_SeleniumTestCase
             'os' => 'Windows 2008',
             'timeout' => 60,
             'httpTimeout' => 45,
-            'host' => 'ondemand.saucelabs.com',
+            'host' => 'eu-central-1.saucelabs.com',
             'port' => 80,
             'name' => get_called_class().'::'.$this->getName(),
             'record-video' => true,
